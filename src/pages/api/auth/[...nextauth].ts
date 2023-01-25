@@ -5,6 +5,7 @@ import firebase from "../../../services/firebaseConnection";
 
 export default NextAuth({
 
+  secret: process.env.NEXTAUTH_SECRET,
   providers: [
     GithubProvider({
         clientId: process.env.GITHUB_CLIENT_ID!,
